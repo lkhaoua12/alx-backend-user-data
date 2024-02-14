@@ -4,7 +4,6 @@ from flask import request
 from typing import List, TypeVar
 
 
-
 class Auth():
     """ base class for auth system """
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
@@ -20,11 +19,9 @@ class Auth():
 
         return True
 
-
     def authorization_header(self, request=None) -> str:
         """ check the request header """
         return None
-
 
     def current_user(self, request=None) -> TypeVar('User'):
         """ check the current user """
